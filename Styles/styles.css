@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    position: relative;
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(76, 219, 255, 0.2), rgba(76, 219, 255, 0.2)), /*Overlays blue colour on image*/
+        url(../images/BristolClockTowerFlipped.jpg) no-repeat center center;
+    background-size: cover;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 1;
+    padding: 20px;
+    padding-left: 39px;
+    z-index: 1000; /*keeps header above everything */
+}
+img {
+    margin-top: 85px;
+    margin-left: 10px;
+    max-width: 250px;
+    max-height: 250px;
+}
+
+ul#links { /*Entire list */
+    list-style-type: none; /*removes bullet points */
+}
+
+ul li { /*Individual list elements*/
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+ul li:last-child {
+    padding-bottom: 0;
+}
