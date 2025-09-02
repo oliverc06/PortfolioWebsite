@@ -1,27 +1,3 @@
-body {
-    margin: 0;
-    position: relative;
-    min-height: 100vh;
-    background:
-        linear-gradient(rgba(76, 219, 255, 0.2), rgba(76, 219, 255, 0.2)), /*Overlays blue colour on image*/
-        url(../images/BristolClockTowerFlipped.jpg) no-repeat center center;
-    background-size: 550px, cover;
-}
-header {
-    position: fixed;
-    top: 0;
-    left: 1;
-    padding: 20px;
-    padding-left: 39px;
-    z-index: 1000; /*keeps header above everything */
-}
-img {
-    margin-top: 85px;
-    margin-left: 10px;
-    max-width: 250px;
-    max-height: 250px;
-}
-
 #openSidenav { /* Button to open SideNav */
     font-size: 20px;
     color: #f1f1f1;
@@ -78,24 +54,44 @@ img {
     padding: 20px;
 }
 
-#Titles {
-    padding-top: 10px;
-}
 
-#Website h2{
+
+h1 {
     font-family: 'Raleway', sans-serif;
     font-weight: lighter;
     margin: 0
 }
-#Website h3{
+h2 {
     font-family: 'Raleway', sans-serif;
     font-weight: lighter;
     margin: 0
 }
 
-h3 {
-    padding-top: 140px;
+p {
+    margin-top: 0;
+    margin-bottom: 20px;
     padding-left: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
+}
+
+#MortgageCalc {
+    display: flex;          /* place text + image side by side */
+    align-items: flex-start; /* align tops */
+    gap: 20px;              /* space between text and image */
+    margin-bottom: 40px;    /* space between projects */
+}
+
+#mortgage-text {
+    flex: 1;
+}
+
+#mortgageCalcPic {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* On smaller screens, where height is less than 450px, change style sidenav (less padding and a smaller font size) */
