@@ -5,7 +5,7 @@ body {
     background:
         linear-gradient(rgba(76, 219, 255, 0.2), rgba(76, 219, 255, 0.2)), /*Overlays blue colour on image*/
         url(../images/BristolClockTowerFlipped.jpg) no-repeat center center;
-    background-size: cover;
+    background-size: 550px, cover;
 }
 header {
     position: fixed;
@@ -22,15 +22,64 @@ img {
     max-height: 250px;
 }
 
-ul#links { /*Entire list */
-    list-style-type: none; /*removes bullet points */
+#openSidenav { /* Button to open SideNav */
+    font-size: 20px;
+    color: #f1f1f1;
+    position: fixed;
+    z-index: 1999;
+    top: 0;
+    padding-top: 20px;
+    cursor: pointer;
 }
 
-ul li { /*Individual list elements*/
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+#openSidenav#hover {
+    color: #555;
 }
 
-ul li:last-child {
-    padding-bottom: 0;
+.sidenav { /* Sidenav menu */
+    height: 100%;
+    width: 0; /* 0 width - change in JS */
+    position: fixed;
+    z-index: 2000; /*Stay on top layer (overlays everything) */
+    top: 0; /*Stay at the top */
+    left: 0;
+    background-color: aquamarine;
+    overflow-x: hidden; /* Disables horizontal scroll */
+    padding-top: 60px; /* Place content 60px from top */
+    transition: 0.5s; /* 0.5 second transition to slide in the sidebar */
+}
+
+.sidenav a:not(.closebtn) { /* Nav menu links */
+    padding: 200px 8px 0px 32px; /* T R B L */
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* Change colour of links when hovering mouse over */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    text-decoration: none;
+    color: #818181;
+}
+
+#main { /* pushes content to right when open sidenav */
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change style sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
